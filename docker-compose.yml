@@ -1,0 +1,16 @@
+services:
+  ai-engine:
+    build: ./ai-engine
+    ports:
+      - "9000:9000"
+
+  demo-app:
+    build: ./app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - REQUIRED_ENV=
+    depends_on:
+      - ai-engine
