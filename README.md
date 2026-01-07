@@ -3,7 +3,7 @@ AI-Driven DevOps Incident Automation
 This project demonstrates an end-to-end AI-powered DevOps incident automation pipeline.
 It automatically detects application crashes using Prometheus, triggers Alertmanager, performs AI-based Root Cause Analysis, and opens GitHub incidents — all visualized in Grafana.
 
-Architecture Flow:
+🧠 Architecture Flow
 
 Application crash occurs
 
@@ -21,7 +21,7 @@ GitHub issue is automatically created
 
 Grafana dashboards visualize the incident
 
-Stack:
+🛠 Stack
 Component	Purpose
 FastAPI	Application + Alertmanager webhook receiver
 Prometheus	Metrics scraping
@@ -31,7 +31,7 @@ Docker Compose	Infrastructure orchestration
 GitHub REST API	Incident creation
 AI Engine	Root Cause Analysis
 GitHub Actions	CI pipeline
-Project Structure:
+📂 Project Structure
 ai-devops-automation/
 │
 ├─ app/
@@ -134,4 +134,3 @@ GitHub issue is created automatically
 curl -X POST http://localhost:8000/alerts \
   -H "Content-Type: application/json" \
   -d '{}'
-
